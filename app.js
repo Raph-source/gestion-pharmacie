@@ -1,7 +1,6 @@
 const express = require("express")
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { swaggerUi, swaggerSpec } = require("./documentation_swagger/documentationSwagger");
 
 const app =  express()
 
@@ -21,9 +20,6 @@ const produit = require("./routeur/produit")
 app.use('/facture/', facture);
 app.use('/pharmacien/', pharmacien);
 app.use('/produit/', produit);
-
-// Documentation de APIs
-app.use("/documentation-api", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.listen(3000, ()=>{
     //date actuelle
