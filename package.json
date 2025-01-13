@@ -1,5 +1,5 @@
 {
-  "name": "tutorat",
+  "name": "gestion-pharmacie",
   "version": "1.0.0",
   "main": "app.js",
   "bin": "app.js",
