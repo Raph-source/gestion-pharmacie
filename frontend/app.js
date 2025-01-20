@@ -182,7 +182,8 @@ document.getElementById("sellButton").addEventListener("click", () => {
     });
     
     content += `</ul>
-      <p><strong>Total:</strong> ${facture.reponse.prixTotal} FC</p>
+      <p><strong>tva:</strong> ${facture.reponse.tva} FC</p>
+      <p><strong>Prix total:</strong> ${facture.reponse.prixTotal} FC</p>
     `;
     
     // Injecter le contenu dans la section de la facture

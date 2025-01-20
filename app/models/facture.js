@@ -31,12 +31,13 @@ class Facture{
         for (const produit of facture.produits) {          
           produit.nom = await Produit.getNom(produit.produitId);
           produit.prix = await Produit.getPrix(produit.produitId);
-          prixTotal += produit.prix
+          prixTotal += produit.prix * produit.quantite
         }
 
-        facture.prixTotal = prixTotal
+        const TVA = (prixTotal * 20) / prixTotal
+        facture.prixTotal = prixTotal + TVA
+        facture.tva = TVA
         
-        console.log(facture);
         
         return facture
     }
